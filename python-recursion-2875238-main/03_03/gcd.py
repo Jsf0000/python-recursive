@@ -2,14 +2,24 @@
 Python Recursion Video Course
 Robin Andrews - https://compucademy.net/
 """
+
 import sys
+sys.path.append("..")  # Adds higher directory to python modules path.
+
 from trace_recursion import trace
 
-sys.path.append("..")  # Adds higher directory to python modules path.
+
 
 
 def gcd_recursive(a, b):
-    pass
+    if b == 0:
+        #base case
+        return a
+    else:
+        # recursive case
+        return gcd_recursive(b, a % b)
+
+
 
 
 gcd_recursive = trace(gcd_recursive)

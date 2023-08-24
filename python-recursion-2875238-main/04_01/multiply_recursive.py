@@ -5,8 +5,10 @@ Robin Andrews - https://compucademy.net/
 
 
 def multiply_recursive(n, a):
-    pass
-
+    if n == 0:
+        return 0
+    else:
+        return a + multiply_recursive(n-1, a)
 
 assert multiply_recursive(5, 4) == 20  # 5 is the multiplier, 4 is the multiplicand
 assert multiply_recursive(5, -4) == -20  # 5 is the multiplier, -4 is the multiplicand
